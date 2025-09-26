@@ -12,8 +12,11 @@ import android.widget.TextView
 private val FEMALE_SYMBOL = "\u2640"
 private val MALE_SYMBOL = "\u2642"
 private const val UNKNOWN_SYMBOL = "?"
-class CatViewHolder(containerView: View, private val imageLoader:
-ImageLoader) : RecyclerView.ViewHolder(containerView) {
+class CatViewHolder(
+    private val containerView: View,
+    private val imageLoader: ImageLoader,
+    private val onClickListener: CatAdapter.OnClickListener) :
+    RecyclerView.ViewHolder(containerView) {
 //containerView is the container layout of each item list
 //Here findViewById is used to get the reference of each views inside the container
     private val catBiographyView: TextView by lazy {
@@ -28,6 +31,11 @@ ImageLoader) : RecyclerView.ViewHolder(containerView) {
         containerView.findViewById(R.id.cat_photo) }
     //This function is called in the adapter to provide the binding function
     fun bindData(cat: CatModel) {
+//Override the onClickListener function
+        containerView.setOnClickListener {
+//Here we are using the onClickListener passed from the Adapter
+            onClickListener.onItemClick(cat)
+        }
         imageLoader.loadImage(cat.imageUrl, catPhotoView)
         catNameView.text = cat.name
         catBreedView.text = when (cat.breed) {
@@ -44,4 +52,3 @@ ImageLoader) : RecyclerView.ViewHolder(containerView) {
         }
     }
 }
-
