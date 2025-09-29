@@ -67,6 +67,55 @@ class MainActivity : AppCompatActivity() {
                     "Curious George",
                     "Award winning investigator",
                     "https://cdn2.thecatapi.com/images/bar.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.BalineseJavanese,
+                    "Daphne",
+                    "Loves to nap in sunbeams",
+                    "https://cdn2.thecatapi.com/images/d3p.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.AmericanCurl,
+                    "Shadow",
+                    "Master of stealth and purrs",
+                    "https://cdn2.thecatapi.com/images/e62.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.ExoticShorthair,
+                    "Marmalade",
+                    "Sweet, fluffy, and clumsy",
+                    "https://cdn2.thecatapi.com/images/154.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.BalineseJavanese,
+                    "Cleo",
+                    "A queen of the sofa",
+                    "https://cdn2.thecatapi.com/images/15a.jpg"
+                ),
+                CatModel(
+                    Gender.Unknown,
+                    CatBreed.ExoticShorthair,
+                    "Whisker",
+                    "Always looking for trouble",
+                    "https://cdn2.thecatapi.com/images/8r0.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.AmericanCurl,
+                    "Zeus",
+                    "A big cat with a big heart",
+                    "https://cdn2.thecatapi.com/images/990.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.BalineseJavanese,
+                    "Luna",
+                    "Nighttime explorer",
+                    "https://cdn2.thecatapi.com/images/15e.jpg"
                 )
             )
         )
